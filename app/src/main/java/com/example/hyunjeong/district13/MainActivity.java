@@ -8,16 +8,36 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.view.View;
+import android.content.Intent;
 
-public class MainActivity extends AppCompatActivity {
+
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Button signInButton = (Button)findViewById(R.id.Search);
-
         setContentView(R.layout.activity_main);
 
+        Button signInButton = (Button) findViewById(R.id.SignIn);
+        Button searchButton = (Button) findViewById(R.id.Search);
+        signInButton.setOnClickListener(this);
+        searchButton.setOnClickListener(this);
+
+    }
+
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.SignIn: {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.Search: {
+                Intent intent = new Intent(getApplicationContext(), SearchResultActivity.class);
+                startActivity(intent);
+                break;
+            }
+        }
     }
 }
