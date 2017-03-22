@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hyunjeong.district13.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="372dp"
+        android:layout_height="501dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Spinner
+            android:id="@+id/Type"
+            android:layout_width="356dp"
+            android:layout_height="23dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="209dp"
+            android:entries="@array/Type"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="112dp" />
+
+        <Spinner
+            android:id="@+id/SaleLease"
+            android:layout_width="356dp"
+            android:layout_height="23dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:entries="@array/SaleLease"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="73dp" />
+
+        <Button
+            android:id="@+id/SignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:text="@string/signInButton"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="296dp"
+            android:layout_below="@+id/Search"
+            android:layout_alignLeft="@+id/Search"
+            android:layout_alignStart="@+id/Search" />
+
+        <Button
+            android:id="@+id/Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Location"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/searchUpButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="367dp" />
+
+        <Spinner
+            android:id="@+id/Location"
+
+            android:layout_width="349dp"
+            android:layout_height="26dp"
+
+            android:layout_alignLeft="@+id/Type"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignStart="@+id/Type"
+            android:layout_alignTop="@+id/Type"
+            android:layout_marginTop="33dp"
+            android:entries="@array/Location"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="37dp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
