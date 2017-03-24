@@ -24,6 +24,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         signInButton.setOnClickListener(this);
         searchButton.setOnClickListener(this);
 
+        Spinner location = (Spinner) findViewById(R.id.Location);
+        Spinner hseType = (Spinner) findViewById(R.id.Type);
+        Spinner saleLease = (Spinner) findViewById(R.id.SaleLease);
+
+        String loc = location.getSelectedItem().toString();
+        String hse = hseType.getSelectedItem().toString();
+        String slease = saleLease.getSelectedItem().toString();
+
     }
 
     public void onClick(View view) {
@@ -39,5 +47,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             }
         }
+    }
+
+    public void sendMessage (View view){
+        Intent intent = new Intent(this, SearchResultActivity.class);
+
     }
 }
